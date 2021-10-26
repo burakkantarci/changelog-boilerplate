@@ -8,8 +8,17 @@ export default function Profile() {
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20">
-        asdfasdfadfsa
+        <a href="/dashboard" class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+          Go to dashboard
+        </a>
 
+        <h1 className="text-3xl font-bold text-gray-700 py-2">
+          This is profile
+        </h1>
+
+        <a href="/" class="text-indigo-500 font-bold py-2 px-4 rounded">
+          Sign Out
+        </a>
         
       </main>
 

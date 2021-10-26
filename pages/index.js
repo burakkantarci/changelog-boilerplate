@@ -29,7 +29,7 @@ export default function Home() {
             <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************" />
           </div>
           <div class="flex items-center justify-between">
-            <a href="/profile" class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+            <a href="/dashboard" class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
               Sign In
             </a>
           </div>
