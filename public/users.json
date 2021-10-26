@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "username": "burak",
+      "password": "password2",
+      "mail":  "burak@thundra.io",
+      "detail": "First name must contain at least three characters."
+    },
+    {
+      "username": "ismail",
+      "password": "password3",
+      "mail":  "ismail@thundra.io",
+      "detail": "First name must contain at least three characters."
+    },
+    {
+      "username": "piril",
+      "password": "password4",
+      "mail":  "piril@thundra.io",
+      "detail": "First name must contain at least three characters."
+    }
+  ]
+}
