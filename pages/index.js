@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Thundra Analytics</title>
         <link rel="icon" href="/favicon.ico" />
+        <script type="text/javascript" src="/static/segment.js"></script>
       </Head>
 
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20">
