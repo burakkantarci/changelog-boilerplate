@@ -1,13 +1,18 @@
 import Head from 'next/head'
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export default function Home() {
-  const fireEvent = (e) => {
+
+  const router = useRouter();
+
+  const handleClick = (e, path) => {
     e.preventDefault();
     analytics.track('Sign Up Clicked', {
       email: 'burak@thundra.io',
       time: Date.now()
     })
-
+    router.push(path)
   }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50">
@@ -37,9 +42,9 @@ export default function Home() {
             <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************" />
           </div>
           <div class="flex items-center justify-between">
-            <a href="/dashboard" onClick={fireEvent} class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+            <button onClick={(e) => handleClick(e, "/dashboard")} class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
               Sign In
-            </a>
+            </button>
           </div>
         </div>
 
