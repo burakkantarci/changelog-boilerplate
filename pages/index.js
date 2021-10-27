@@ -1,6 +1,14 @@
 import Head from 'next/head'
 
 export default function Home() {
+  const fireEvent = (e) => {
+    e.preventDefault();
+    analytics.track('Sign Up Clicked', {
+      email: 'burak@thundra.io',
+      time: Date.now()
+    })
+
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50">
       <Head>
@@ -8,7 +16,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <script type="text/javascript" src="/static/segment.js"></script>
       </Head>
-
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20">
         <div className="text-lg">
           Welcome to
@@ -30,7 +37,7 @@ export default function Home() {
             <input class="shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3" id="password" type="password" placeholder="******************" />
           </div>
           <div class="flex items-center justify-between">
-            <a href="/dashboard" class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
+            <a href="/dashboard" onClick={fireEvent} class="bg-indigo-600 hover:bg-blue-dark text-white font-bold py-2 px-4 rounded">
               Sign In
             </a>
           </div>
