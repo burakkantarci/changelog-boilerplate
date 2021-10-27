@@ -1,7 +1,8 @@
 import Head from 'next/head'
 
-
 export default function Profile() {
+
+  const router = useRouter()
 
   const handleClick = (e, clickItem , path) => {
     e.preventDefault();

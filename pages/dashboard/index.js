@@ -1,6 +1,9 @@
 import Head from 'next/head'
+import { useRouter } from "next/router";
 
 export default function Dashboard() {
+
+  const router = useRouter()
 
   const handleClick = (e, clickItem , path) => {
     e.preventDefault();
@@ -11,7 +14,7 @@ export default function Dashboard() {
     })
     router.push(path)
   }
-  
+
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50">
       <Head>
