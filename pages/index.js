@@ -8,15 +8,14 @@ export default function Home() {
   const handleClick = (e, clickItem , path) => {
     e.preventDefault();
     analytics.track( clickItem + ' Clicked', {})
-
     router.push(path)
   }
+  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-50">
       <Head>
         <title>Thundra Analytics</title>
         <link rel="icon" href="/favicon.ico" />
-        <script type="text/javascript" src="/static/segment.js"></script>
       </Head>
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20">
         <div className="text-lg">

@@ -1,4 +1,6 @@
 import 'tailwindcss/tailwind.css'
+import Head from 'next/head'
+import { useEffect, useState } from 'react'
 // import mixpanel from 'mixpanel-browser';
 // // or with require() syntax:
 // // const mixpanel = require('mixpanel-browser');
@@ -43,14 +45,23 @@ const users = [
 
 function MyApp({ Component, pageProps }) {
 
-  const user = users[Math.floor(Math.random() * 4)];
+  const [user, setUser] = useState(users[Math.floor(Math.random() * 4)]);
+ 
+  useEffect(() => {
+    analytics.identify({
+      email: user.mail,
+      name: user.username
+    })
+  });
 
-  analytics.identify({
-    email: user.mail,
-    name: user.username
-  })
-
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <script type="text/javascript" src="/static/segment.js"></script>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
 
 export default MyApp
