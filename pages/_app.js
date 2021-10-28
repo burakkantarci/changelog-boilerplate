@@ -8,7 +8,48 @@ import 'tailwindcss/tailwind.css'
 // mixpanel.init('b1fe62e77d332c49f378bce11d03ef35', {debug: true}); 
 // mixpanel.track('Sign up');
 
+const users = [
+  {
+    "username": "burak",
+    "password": "password2",
+    "mail":  "burak@thundra.io",
+    "detail": "First name must contain at least three characters."
+  },
+  {
+    "username": "ismail",
+    "password": "password3",
+    "mail":  "ismail@thundra.io",
+    "detail": "First name must contain at least three characters."
+  },
+  {
+    "username": "piril",
+    "password": "password4",
+    "mail":  "piril@thundra.io",
+    "detail": "First name must contain at least three characters."
+  },
+  {
+    "username": "ozan",
+    "password": "password4",
+    "mail":  "ozan@thundra.io",
+    "detail": "First name must contain at least three characters."
+  },
+  {
+    "username": "beril",
+    "password": "password4",
+    "mail":  "beril@thundra.io",
+    "detail": "First name must contain at least three characters."
+  }
+]
+
 function MyApp({ Component, pageProps }) {
+
+  const user = users[Math.floor(Math.random() * 4)];
+
+  analytics.identify({
+    email: user.mail,
+    name: user.username
+  })
+
   return <Component {...pageProps} />
 }
 

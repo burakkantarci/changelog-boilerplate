@@ -7,11 +7,7 @@ export default function Profile() {
 
   const handleClick = (e, clickItem , path) => {
     e.preventDefault();
-    analytics.track( clickItem + ' Clicked', {
-      name: 'Burak Kantarcı',
-      email: 'burak@thundra.io',
-      time: Date.now()
-    })
+    analytics.track( clickItem + ' Clicked', {})
     router.push(path)
   }
 
