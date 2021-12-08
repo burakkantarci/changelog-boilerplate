@@ -52,11 +52,12 @@ function MyApp({ Component, pageProps }) {
     heap.addUserProperties({
       'Name': user.username, 
       'Email': user.mail,
-      'Profession': user.detai
+      'Profession': user.detail
     });
     heap.addEventProperties({ 
       'Logged In': 'true', 
-      'Payment Plan': 'Free' 
+      'ForesightOnboardingPassed': 'false', 
+      'APMOnboardingPassed': 'false'
     });
   });
 
