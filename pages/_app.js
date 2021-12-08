@@ -48,10 +48,7 @@ function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState(users[Math.floor(Math.random() * 4)]);
  
   useEffect(() => {
-    analytics.identify({
-      email: user.mail,
-      name: user.username
-    })
+   
   });
 
   return (
