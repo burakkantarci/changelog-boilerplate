@@ -58,6 +58,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <script type="text/javascript" src="/static/segment.js"></script>
+        <script type="text/javascript" src="/static/heap.js"></script>
       </Head>
       <Component {...pageProps} />
     </>
