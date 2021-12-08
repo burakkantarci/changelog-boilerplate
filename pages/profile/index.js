@@ -7,7 +7,7 @@ export default function Profile() {
 
   const handleClick = (e, clickItem , path) => {
     e.preventDefault();
-    analytics.track( clickItem + ' Clicked', {})
+    //analytics.track( clickItem + ' Clicked', {})
     router.push(path)
   }
 
