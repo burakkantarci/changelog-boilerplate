@@ -54,6 +54,10 @@ function MyApp({ Component, pageProps }) {
       'Email': user.mail,
       'Profession': user.detai
     });
+    heap.addEventProperties({ 
+      'Logged In': 'true', 
+      'Payment Plan': 'Free' 
+    });
   });
 
   return (
