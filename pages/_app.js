@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState(users[Math.floor(Math.random() * 4)]);
  
   useEffect(() => {
-    heap.identify('unique_identifier');
+//    heap.identify('unique_identifier');
     heap.addUserProperties({
       'Name': user.username, 
       'Email': user.mail,
