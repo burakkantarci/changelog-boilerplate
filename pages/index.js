@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import React, { useEffect} from "react";
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
@@ -7,8 +7,13 @@ import Header from './header'
 import { compareAsc, format } from 'date-fns'
 
 export default function Home({ posts }) {
+
+  useEffect(() => {
+    document.title = "Foresight Changelog";  
+  }, []);
+  
   return (
-    <div className='bg-gray-50 h-full'>
+    <div>
       <Header />
       <div className='w-2/3 mx-auto pt-24'>
         {posts.slice(0).reverse().map((post, index) => (
@@ -26,8 +31,11 @@ export default function Home({ posts }) {
                     {post.frontMatter.title}                   
                   </div>
                   <span className='block text-md text-gray-500 py-2'>{post.frontMatter.description}</span>
-                  <span className='py-1 my-2 inline-block font-semibold rounded-full text-blue-600 text-xs mr-2'>Foresight &rarr;</span>
-                  <span className='px-2 py-1 my-2 inline-block font-semibold rounded-full border-2 text-gray-500 text-xs'>Improvement</span>
+                  {
+                    post.frontMatter.tags.map((tag, index) =>
+                      <span className='px-2 py-1 my-2 mr-1 inline-block font-semibold rounded-full border-2 text-gray-500 text-xs'>{tag}</span>
+                    )
+                  }
                 </div>
               </div>
             </div>
