@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-		<div className="w-full bg-white shadow-sm shadow-slate-200">
+		<div className="w-full backdrop-blur-xl bg-white/50 fixed shadow-sm shadow-slate-200 mt-0 pt-0">
 			<nav className="w-2/3 flex justify-between items-center h-16 mx-auto">
 				{/* <img
 					className="w-24"

@@ -49,16 +49,16 @@ function MyApp({ Component, pageProps }) {
  
   useEffect(() => {
 //    heap.identify('unique_identifier');
-    heap.addUserProperties({
-      'Name': user.username, 
-      'Email': user.mail,
-      'Profession': user.detail
-    });
-    heap.addEventProperties({ 
-      'Logged In': 'true', 
-      'ForesightOnboardingPassed': 'false', 
-      'APMOnboardingPassed': 'false'
-    });
+    // heap.addUserProperties({
+    //   'Name': user.username, 
+    //   'Email': user.mail,
+    //   'Profession': user.detail
+    // });
+    // heap.addEventProperties({ 
+    //   'Logged In': 'true', 
+    //   'ForesightOnboardingPassed': 'false', 
+    //   'APMOnboardingPassed': 'false'
+    // });
   });
 
   return (
@@ -66,6 +66,7 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <script type="text/javascript" src="/static/segment.js"></script>
         <script type="text/javascript" src="/static/heap.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/reset.css" />
       </Head>
       <Component {...pageProps} />
     </>
